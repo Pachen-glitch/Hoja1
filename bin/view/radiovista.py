@@ -1,16 +1,35 @@
 from tkinter import *
 from tkinter import ttk
 
+class BackendRadio:
+    def encender(self):
+        return "FM 87.9"
+
+    def apagar(self):
+        return "APAGADA"
+
+    def cambiarBanda(self):
+        return "AM 540"
+
+    def avanzarEstacion(self):
+        return "FM 88.1"
+
+    def guardarFavorito(self, pos):
+        return f"Favorito {pos+1} guardado"
+
+    def cargarFavorito(self, pos):
+        return f"FM 95.5"
+
+
 class RadioApp(Tk):
     def __init__(self):
         super().__init__()
         self.title("Radio AM / FM")
         self.geometry("600x350")
         self.resizable(False, False)
-
-        self.encendida = False
-        self.banda = "FM"
-        self.frecuencia = 88.1
+        self.backend = BackendRadio()
+    
+        
 
         #  Pantalla 
         self.display = Label(
@@ -80,45 +99,27 @@ class RadioApp(Tk):
 
     #  Funciones 
     def encender(self):
-        self.encendida = True
-        self.actualizar_display()
+        texto = self.backend.encender()
+        self.display.config(text=texto)
 
     def apagar(self):
-        self.encendida = False
-        self.display.config(text="APAGADA")
+        texto = self.backend.apagar()
+        self.display.config(text=texto)
 
     def cambiar_banda(self):
-        if not self.encendida:
-            return
-        self.banda = "AM" if self.banda == "FM" else "FM"
-        self.frecuencia = 540 if self.banda == "AM" else 88.1
-        self.actualizar_display()
+        texto = self.backend.cambiarBanda()
+        self.display.config(text=texto)
 
     def avanzar_estacion(self):
-        if not self.encendida:
-            return
-        if self.banda == "FM":
-            self.frecuencia += 0.2
-            if self.frecuencia > 108:
-                self.frecuencia = 88.1
-        else:
-            self.frecuencia += 10
-            if self.frecuencia > 1700:
-                self.frecuencia = 540
-        self.actualizar_display()
+        texto = self.backend.avanzarEstacion()
+        self.display.config(text=texto)
 
-    def guardar_favorito(self, index):
-        if not self.encendida:
-            return
-        if len(self.favoritos) <= index:
-            self.favoritos.extend([None] * (index + 1 - len(self.favoritos)))
-        self.favoritos[index] = (self.banda, self.frecuencia)
-        print(f"Favorito {index+1} guardado:", self.favoritos[index])
+    def guardar_favorito(self, pos):
+        texto = self.backend.guardarFavorito(pos)
+        self.display.config(text=texto)
 
-    def actualizar_display(self):
-        if self.encendida:
-            self.display.config(
-                text=f"{self.banda}  {self.frecuencia:.1f}"
-            )
+    def cargar_favorito(self, pos):
+        texto = self.backend.cargarFavorito(pos)
+        self.display.config(text=texto)
 a= RadioApp()
 a.mainloop()
