@@ -1,24 +1,32 @@
 from tkinter import *
 from tkinter import ttk
 
+import requests
+
 class BackendRadio:
+    BASE_URL = "http://localhost:8000"
+
     def encender(self):
-        return "FM 87.9"
+        return requests.get(f"{self.BASE_URL}/encender").text
 
     def apagar(self):
-        return "APAGADA"
+        return requests.get(f"{self.BASE_URL}/apagar").text
 
     def cambiarBanda(self):
-        return "AM 540"
+        return requests.get(f"{self.BASE_URL}/cambiar").text
 
     def avanzarEstacion(self):
-        return "FM 88.1"
+        return requests.get(f"{self.BASE_URL}/avanzar").text
+
+    def usarFavorito(self, pos):
+        return requests.get(
+            f"{self.BASE_URL}/favorito?pos={pos}"
+        ).text
 
     def guardarFavorito(self, pos):
-        return f"Favorito {pos+1} guardado"
-
-    def cargarFavorito(self, pos):
-        return f"FM 95.5"
+        return requests.get(
+            f"{self.BASE_URL}/guardar?pos={pos}"
+        ).text
 
 
 class RadioApp(Tk):
