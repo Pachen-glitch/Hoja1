@@ -27,25 +27,36 @@ public class RadioGroup implements Radio {
         estado = false;
     }
 
-  public void guardarEstacion(int numeroBoton) {
-    if (estacion == 1) { // AM
-        favoritos.add(numeroBoton, new Favorito(1, estacionAm));
-    } else { // FM
-        favoritos.add(numeroBoton, new Favorito(0, estacionFm));
-    }
-}
+ public void guardarEstacion(int numeroBoton) {
+    
+        while (favoritos.size() <= numeroBoton) {
+            favoritos.add(null);
+        }
 
+        if (estacion == 1) { // AM
+            favoritos.set(numeroBoton, new Favorito(1, estacionAm));
+        } else { // FM
+            favoritos.set(numeroBoton, new Favorito(0, estacionFm));
+        }
+    }
+
+    @Override
     public void cargarEstacion(int numeroBoton) {
-    Favorito fav = favoritos.get(numeroBoton);
+        if (numeroBoton >= favoritos.size() || favoritos.get(numeroBoton) == null) {
+            throw new IllegalStateException("Favorito vacío");
+        }
 
-    estacion = fav.getTipo(); // cambia AM / FM automáticamente
+        Favorito fav = favoritos.get(numeroBoton);
+        estacion = fav.getTipo();
 
-    if (estacion == 1) {
-        estacionAm = (int) fav.getEstacion();
-    } else {
-        estacionFm = fav.getEstacion();
+        if (estacion == 1) { // AM
+            estacionAm = (int) fav.getEstacion();
+        } else { // FM
+            estacionFm = fav.getEstacion();
+        }
     }
-}
+
+
 
     public void avanzarEstacion() {
         if (estacion == 1) { // AM

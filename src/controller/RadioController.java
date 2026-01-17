@@ -27,12 +27,21 @@ public class RadioController {
     public void adelantarEstacion() {
         service.adelantarEstacion();
     }
-    public void cargarEstacion(int numeroBoton) {
-        service.cargarEstacion(numeroBoton);
+    public String usarEstacion(int numeroBoton) {
+        return service.usarEstacion(numeroBoton);
     }
     public void guardarEstacion(int numeroBoton) {
         service.guardarEstacion(numeroBoton);
     }
+    public String obtenerEstacion() {
+    return service.getEstacionActual();
+}
+public String toggleBanda() {
+    service.toggleBanda();
+    return service.getEstacionActual();
+}
 
-    
+
+
+
 }

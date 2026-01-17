@@ -34,6 +34,15 @@ public class RadioService {
             radio.cambiarFM();
         }
     }
+    public void toggleBanda() {
+    if (!validar()) return;
+
+    if (radio.getEstacion() == 1) {
+        radio.cambiarFM();
+    } else {
+        radio.cambiarAM();
+    }
+}
 
     public void adelantarEstacion() {
         if (!validar()) return;
@@ -48,13 +57,30 @@ public class RadioService {
         return true;
     }
 
-    public void cargarEstacion(int numeroBoton) {
-        if (!validar()) return;
+    public String usarEstacion(int numeroBoton) {
+    if (!validar()) return "APAGADA";
+
+    try {
         radio.cargarEstacion(numeroBoton);
+        return getEstacionActual();
+    } catch (IllegalStateException e) {
+        return "Favorito vacío";
     }
-    public void guardarEstacion(int numeroBoton) {
-        if (!validar()) return;
-        radio.guardarEstacion(numeroBoton);
+}
+
+public String guardarEstacion(int numeroBoton) {
+    if (!validar()) return "APAGADA";
+    radio.guardarEstacion(numeroBoton);
+    return "Guardado: " + getEstacionActual();
+}
+
+    public String getEstacionActual() {
+    if (radio.getEstacion() == 1) { // AM
+        return radio.getEstacionAm() + " AM";
+    } else { // FM
+        return String.format("%.1f FM", radio.getEstacionFm());
     }
-    
+}
+
+
 }
