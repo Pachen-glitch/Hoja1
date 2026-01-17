@@ -1,96 +1,88 @@
-public class RadioGroup{
+package models;
 
-    public RadioGroup extends Radio(){
-        private boolean Estado;
-        private int Estacion;//1 Am, 0 Fm
-        private float EstacionFm=87.9;//107.9
-        private int EstacionAm=530;//1610
-        private Arraylist Favoritos= new ArrayList<>(12);
-    }
-    public void prenderRadio(){
-        setEstado(true);
-    }
-    public void apagarRadio(){
-        setEstado(false);
+import models.interfas.Radio;
+import java.util.ArrayList;
+
+public class RadioGroup implements Radio {
+
+    private boolean estado;
+    private int estacion; // 1 AM, 0 FM
+    private double estacionFm; // 87.9 - 107.9
+    private int estacionAm;    // 530 - 1610
+    private ArrayList<Favorito> favoritos;
+
+    public RadioGroup() {
+        this.estado = false;
+        this.estacion = 0;
+        this.estacionFm = 87.9;
+        this.estacionAm = 530;
+        this.favoritos = new ArrayList<>(12);
     }
 
-    public void avanzarEstacion(){
-        if (getEstacion()==1){
-            if (getEstacionAm()==1610){
-                setEstacionAm(520)
+    public void prenderRadio() {
+        estado = true;
+    }
+
+    public void apagarRadio() {
+        estado = false;
+    }
+
+  public void guardarEstacion(int numeroBoton) {
+    if (estacion == 1) { // AM
+        favoritos.add(numeroBoton, new Favorito(1, estacionAm));
+    } else { // FM
+        favoritos.add(numeroBoton, new Favorito(0, estacionFm));
+    }
+}
+
+    public void cargarEstacion(int numeroBoton) {
+    Favorito fav = favoritos.get(numeroBoton);
+
+    estacion = fav.getTipo(); // cambia AM / FM automáticamente
+
+    if (estacion == 1) {
+        estacionAm = (int) fav.getEstacion();
+    } else {
+        estacionFm = fav.getEstacion();
+    }
+}
+
+    public void avanzarEstacion() {
+        if (estacion == 1) { // AM
+            estacionAm += 10;
+            if (estacionAm > 1610) {
+                estacionAm = 530;
             }
-            setEstacionAm(getEstacionAm()+10)
-        }
-        else{
-            
-            if (getEstacionFm()==107.9){
-                setEstacionFm(87.7)
+        } else { // FM
+            estacionFm += 0.2;
+            if (estacionFm > 107.9) {
+                estacionFm = 87.9;
             }
-            setEstacionFm(getEstacionFm()+0.2)
-            
         }
     }
 
-    public cambiarAM(){
-        setEstacion(1);
-    }
-    public cambiarFM(){
-        setEstacion(0);
+    public void cambiarAM() {
+        estacion = 1;
     }
 
+    public void cambiarFM() {
+        estacion = 0;
+    }
 
-
-
-    // Getter y Setter de estado
+    // Getters
     public boolean getEstado() {
         return estado;
     }
 
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
-
-    // Getter y Setter de estacion
     public int getEstacion() {
         return estacion;
     }
 
-    public void setEstacion(int estacion) {
-        this.estacion = estacion;
-    }
-
-    // Getter y Setter de estacion FM
-    public float getEstacionFm() {
+    public double getEstacionFm() {
         return estacionFm;
     }
 
-    public void setEstacionFm(float estacionFm) {
-        this.estacionFm = estacionFm;
-    }
-
-    // Getter y Setter de estacion AM
     public int getEstacionAm() {
         return estacionAm;
     }
-
-    public void setEstacionAm(int estacionAm) {
-        this.estacionAm = estacionAm;
-    }
-
-    // Getter y Setter de favoritos
-
-    
-    public float getFavoritos(int pos) {
-        return favoritos[pos];
-    }
-
-    public void setFavoritos(int pos) {
-        if(getEstacion()==1){
-            favoritos[pos]=getEstacionAm();
-        }
-        else{
-            favoritos[pos]=getEstacionFm();
-        }
-    }
-    }    
-
+}

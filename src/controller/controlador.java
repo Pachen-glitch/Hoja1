@@ -1,3 +1,6 @@
+package src.controller;
+import src.model.RadioGroup;
+
 public class controlador(){
     public Radio= new RadioGroup()
 }

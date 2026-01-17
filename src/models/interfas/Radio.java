@@ -1,4 +1,4 @@
-
+package models.interfas;
 public interface Radio{
     void prenderRadio();
     void apagarRadio();
