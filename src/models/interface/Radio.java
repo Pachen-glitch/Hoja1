@@ -7,7 +7,7 @@ public interface Radio{
     void cargarEstacion(int numeroBoton);
     void cambiarFM();
     void cambiarAM();
+
+
     
-
-
 }
