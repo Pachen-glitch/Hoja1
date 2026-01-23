@@ -41,6 +41,9 @@ public String toggleBanda() {
     return service.getEstacionActual();
 }
 
+    public boolean tieneFavorito(int pos) {
+    return service.tieneFavorito(pos);
+}
 
 
 

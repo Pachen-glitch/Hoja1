@@ -36,11 +36,27 @@ public class RadioServer {
 
 
         server.createContext("/favorito", exchange -> {
-            String query = exchange.getRequestURI().getQuery(); // pos=3
+            String query = exchange.getRequestURI().getQuery(); 
             int pos = Integer.parseInt(query.split("=")[1]);
-            String response = controller.usarEstacion(pos);
+
+            String response;
+
+            if (controller.tieneFavorito(pos)) {
+                response = controller.usarEstacion(pos); 
+            } else {
+                controller.guardarEstacion(pos);          
+                response = "GUARDADO";
+            }
+
             send(exchange, response);
         });
+
+        server.createContext("/guardar", exchange -> {
+        String query = exchange.getRequestURI().getQuery();
+        int pos = Integer.parseInt(query.split("=")[1]);
+        controller.guardarEstacion(pos);
+        send(exchange, "GUARDADO");
+    });
 
         server.start();
         System.out.println("Servidor iniciado en http://localhost:8000");

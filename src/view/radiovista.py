@@ -1,5 +1,4 @@
 from tkinter import *
-from tkinter import ttk
 
 import requests
 
@@ -21,11 +20,6 @@ class BackendRadio:
     def usarFavorito(self, pos):
         return requests.get(
             f"{self.BASE_URL}/favorito?pos={pos}"
-        ).text
-
-    def guardarFavorito(self, pos):
-        return requests.get(
-            f"{self.BASE_URL}/guardar?pos={pos}"
         ).text
 
 
@@ -83,7 +77,7 @@ class RadioApp(Tk):
                 fav_frame,
                 text=f"{i+1}",
                 width=5,
-                command=lambda i=i: self.guardar_favorito(i)
+                command=lambda i=i: self.usar_favorito(i)
             )
             btn.grid(row=i//6, column=i%6, padx=5, pady=5)
 
@@ -122,8 +116,8 @@ class RadioApp(Tk):
         texto = self.backend.avanzarEstacion()
         self.display.config(text=texto)
 
-    def guardar_favorito(self, pos):
-        texto = self.backend.guardarFavorito(pos)
+    def usar_favorito(self, pos):
+        texto = self.backend.usarFavorito(pos)
         self.display.config(text=texto)
 
     def cargar_favorito(self, pos):

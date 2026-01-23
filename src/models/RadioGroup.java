@@ -27,18 +27,22 @@ public class RadioGroup implements Radio {
         estado = false;
     }
 
- public void guardarEstacion(int numeroBoton) {
-    
-        while (favoritos.size() <= numeroBoton) {
-            favoritos.add(null);
-        }
+    public void guardarEstacion(int numeroBoton) {
 
-        if (estacion == 1) { // AM
-            favoritos.set(numeroBoton, new Favorito(1, estacionAm));
-        } else { // FM
-            favoritos.set(numeroBoton, new Favorito(0, estacionFm));
-        }
+    Favorito nuevo;
+
+    if (estacion == 1) { // AM
+        nuevo = new Favorito(1, estacionAm);
+    } else { // FM
+        nuevo = new Favorito(0, estacionFm);
     }
+
+    while (favoritos.size() <= numeroBoton) {
+        favoritos.add(null);
+    }
+
+    favoritos.set(numeroBoton, nuevo);
+}
 
     @Override
     public void cargarEstacion(int numeroBoton) {
@@ -71,6 +75,10 @@ public class RadioGroup implements Radio {
             }
         }
     }
+
+    public boolean tieneFavorito(int pos) {
+    return pos < favoritos.size() && favoritos.get(pos) != null;
+}
 
     public void cambiarAM() {
         estacion = 1;

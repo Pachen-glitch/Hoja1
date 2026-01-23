@@ -82,5 +82,7 @@ public String guardarEstacion(int numeroBoton) {
     }
 }
 
-
+public boolean tieneFavorito(int pos) {
+    return radio.tieneFavorito(pos);
+}
 }
