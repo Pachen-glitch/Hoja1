@@ -1,0 +1,5 @@
+models\RadioGroupTest.class
+models\FavoritoTest.class
+server\RadioServerTest.class
+controller\RadioControllerTest.class
+service\RadioServiceTest.class
