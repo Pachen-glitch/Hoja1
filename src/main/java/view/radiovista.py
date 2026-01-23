@@ -3,10 +3,10 @@ from tkinter import *
 import requests
 
 class BackendRadio:
-    BASE_URL = "http://localhost:8000"
+    BASE_URL = "http://localhost:8000" # se define la url que usara el servidor
 
     def encender(self):
-        return requests.get(f"{self.BASE_URL}/encender").text
+        return requests.get(f"{self.BASE_URL}/encender").text # los request que se haran al servidor
 
     def apagar(self):
         return requests.get(f"{self.BASE_URL}/apagar").text

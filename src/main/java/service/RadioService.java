@@ -5,7 +5,8 @@ import models.RadioGroup;
 public class RadioService {
 
     private RadioGroup radio;
-
+// logica de la radio\
+// El service tiene toda la logica de la aplicacion 
     public RadioService(RadioGroup radio) {
         this.radio = radio;
     }
@@ -49,7 +50,7 @@ public class RadioService {
         if (!validar()) return;
         radio.avanzarEstacion();
     }
-
+// metodo para validar si la radio esta encendida
     private boolean validar() {
         if (!radio.getEstado()) {
             System.out.println("La radio está apagada");
@@ -74,7 +75,7 @@ public class RadioService {
         radio.guardarEstacion(numeroBoton);
         return "Guardado: " + getEstacionActual();
     }
-
+// Metodos que utiliza el controlador para dar respuesta al cliente
     public String getEstacionActual() {
         if (radio.getEstacion() == 1) { // AM
             return radio.getEstacionAm() + " AM";

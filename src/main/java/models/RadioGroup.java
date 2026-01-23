@@ -9,7 +9,7 @@ public class RadioGroup implements Radio {
     private int estacion; // 1 AM, 0 FM
     private double estacionFm; // 87.9 - 107.9
     private int estacionAm;    // 530 - 1610
-    private ArrayList<Favorito> favoritos;
+    private ArrayList<Favorito> favoritos;/*Implementacion de la radio */
 
     public RadioGroup() {
         this.estado = false;
@@ -72,7 +72,7 @@ public class RadioGroup implements Radio {
             }
         }
     }
-
+//setter y getters
     public void cambiarAM() {
         estacion = 1;
     }

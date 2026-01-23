@@ -13,7 +13,7 @@ public class RadioServer {
         RadioController controller = new RadioController();
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-
+// Crea distintos endpoints para cada funcionalidad de la radio
         server.createContext("/encender", exchange -> {
             controller.encender();
             send(exchange, controller.obtenerEstacion());
