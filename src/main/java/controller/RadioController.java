@@ -8,7 +8,7 @@ public class RadioController {
     private RadioService service;
 
     public RadioController() {
-        RadioGroup radio = new RadioGroup(); // modelo 
+        RadioGroup radio = new RadioGroup();
         service = new RadioService(radio);
     }
 
@@ -27,24 +27,21 @@ public class RadioController {
     public void adelantarEstacion() {
         service.adelantarEstacion();
     }
+
     public String usarEstacion(int numeroBoton) {
         return service.usarEstacion(numeroBoton);
     }
+
     public void guardarEstacion(int numeroBoton) {
         service.guardarEstacion(numeroBoton);
     }
+
     public String obtenerEstacion() {
-    return service.getEstacionActual();
-}
-public String toggleBanda() {
-    service.toggleBanda();
-    return service.getEstacionActual();
-}
+        return service.getEstacionActual();
+    }
 
-    public boolean tieneFavorito(int pos) {
-    return service.tieneFavorito(pos);
-}
-
-
-
+    public String toggleBanda() {
+        service.toggleBanda();
+        return service.getEstacionActual();
+    }
 }

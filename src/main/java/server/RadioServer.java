@@ -15,7 +15,6 @@ public class RadioServer {
         HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
         server.createContext("/encender", exchange -> {
-            String response = controller.obtenerEstacion();
             controller.encender();
             send(exchange, controller.obtenerEstacion());
         });
@@ -31,20 +30,18 @@ public class RadioServer {
         });
 
         server.createContext("/cambiar", exchange -> {
-    send(exchange, controller.toggleBanda());
-});
+            send(exchange, controller.toggleBanda());
+        });
 
-
+        // Favoritos
         server.createContext("/favorito", exchange -> {
-            String query = exchange.getRequestURI().getQuery(); 
+            String query = exchange.getRequestURI().getQuery();
             int pos = Integer.parseInt(query.split("=")[1]);
 
-            String response;
+            String response = controller.usarEstacion(pos);
 
-            if (controller.tieneFavorito(pos)) {
-                response = controller.usarEstacion(pos); 
-            } else {
-                controller.guardarEstacion(pos);          
+            if (response.equals("Favorito vacío")) {
+                controller.guardarEstacion(pos);
                 response = "GUARDADO";
             }
 
@@ -52,16 +49,25 @@ public class RadioServer {
         });
 
         server.createContext("/guardar", exchange -> {
-        String query = exchange.getRequestURI().getQuery();
-        int pos = Integer.parseInt(query.split("=")[1]);
-        controller.guardarEstacion(pos);
-        send(exchange, "GUARDADO");
-    });
+            String query = exchange.getRequestURI().getQuery();
+            int pos = Integer.parseInt(query.split("=")[1]);
+            controller.guardarEstacion(pos);
+            send(exchange, "GUARDADO");
+        });
 
         server.start();
         System.out.println("Servidor iniciado en http://localhost:8000");
         System.out.println("Inicie el cliente con python (radiovista.py)");
 
+        //  Abrir cliente Python automáticamente al iniciar el servidor
+        try {
+            new ProcessBuilder("python", "radiovista.py")
+                    .directory(new java.io.File("src/main/java/view"))
+                    .inheritIO()
+                    .start();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     private static void send(com.sun.net.httpserver.HttpExchange exchange, String response) throws IOException {
