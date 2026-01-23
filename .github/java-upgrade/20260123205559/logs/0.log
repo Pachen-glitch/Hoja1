@@ -1,0 +1,563 @@
+2026-01-23T20:55:59.181Z [INFO] ----------------------invoke build_java_project----------------------
+2026-01-23T20:55:59.189Z [INFO] [Tool.invoke]({name: build_java_project, input: {
+  "codeChangesDetails": "- Generate unit tests for Favorito class\\n- Generate unit tests for RadioGroup class\\n- Generate unit tests for RadioService class\\n- Generate unit tests for RadioController class",
+  "codeChangesMessage": "Generate unit tests for radio project classes",
+  "projectPath": "c:\\Users\\Admin\\Documents\\Hoja1"
+}}).
+2026-01-23T20:55:59.189Z [INFO] [Task.start](): Starting task toolCall
+2026-01-23T20:55:59.189Z [INFO] [Task.start](): Started task toolCall
+2026-01-23T20:55:59.190Z [INFO] [Tool.invoke] validate GitHub Copilot license.
+2026-01-23T20:55:59.205Z [INFO] [Tool.invoke] do pre-invoke.
+2026-01-23T20:55:59.205Z [INFO] Project c:\Users\Admin\Documents\Hoja1 is a maven project, try to get java version from pom.xml
+2026-01-23T20:55:59.210Z [INFO] Project java version: 21
+2026-01-23T20:55:59.211Z [INFO] Maven project detected.
+2026-01-23T20:55:59.211Z [INFO] Build tool type: mvn
+2026-01-23T20:55:59.278Z [INFO] [Environment] Running command (Java 21): java -version
+openjdk version "21.0.8" 2025-07-15 LTS
+OpenJDK Runtime Environment Microsoft-11933218 (build 21.0.8+9-LTS)
+OpenJDK 64-Bit Server VM Microsoft-11933218 (build 21.0.8+9-LTS, mixed mode, sharing)
+2026-01-23T20:55:59.392Z [INFO] [JdkEnvironment] Got real Java version: 21.0.8
+2026-01-23T20:55:59.393Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\Admin\\.jdk\\jdk-21.0.8\\bin",
+  "version": "21"
+}
+2026-01-23T20:55:59.398Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\WorkSpace\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Admin\.jdk\jdk-21.0.8
+Default locale: es_GT, platform encoding: UTF-8
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+2026-01-23T20:55:59.870Z [INFO] Real build tool version: 3.9.11
+2026-01-23T20:55:59.870Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\WorkSpace\\apache-maven-3.9.11\\bin",
+  "version": "3.9.11"
+}
+2026-01-23T20:55:59.870Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\WorkSpace\\apache-maven-3.9.11\\bin",
+    "name": "mvn",
+    "version": "3.9.11"
+  },
+  "jdk": {
+    "path": "C:\\Users\\Admin\\.jdk\\jdk-21.0.8\\bin",
+    "name": "java",
+    "version": "21"
+  },
+  "name": "Hoja1",
+  "dir": "c:\\Users\\Admin\\Documents\\Hoja1"
+}
+2026-01-23T20:55:59.875Z [INFO] [Tool.invoke] do invoke.
+2026-01-23T20:55:59.875Z [INFO] [BaseBuildTool] Firing config modified event for mvn, sleeping for 5 seconds
+2026-01-23T20:55:59.875Z [INFO] [Environment] Running command (Java 21): mvn --version
+Apache Maven 3.9.11 (3e54c93a704957b63ee3494413a2b544fd3d825b)
+Maven home: C:\WorkSpace\apache-maven-3.9.11
+Java version: 21.0.8, vendor: Microsoft, runtime: C:\Users\Admin\.jdk\jdk-21.0.8
+Default locale: es_GT, platform encoding: UTF-8
+OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
+2026-01-23T20:56:00.331Z [INFO] [BaseBuildTool] New version of mvn: 3.9.11 -> 3.9.11
+2026-01-23T20:56:00.331Z [INFO] [MavenBuildTool] Getting Java version of c:\Users\Admin\Documents\Hoja1 from pom.xml
+2026-01-23T20:56:00.332Z [INFO] [MavenBuildTool] Searching for pom.xml files in c:\Users\Admin\Documents\Hoja1
+2026-01-23T20:56:00.332Z [INFO] [MavenBuildTool] Getting all module coordinates of c:\Users\Admin\Documents\Hoja1
+2026-01-23T20:56:00.332Z [INFO] [MavenBuildTool] Getting effective POMs of c:\Users\Admin\Documents\Hoja1
+2026-01-23T20:56:00.332Z [INFO] [Environment] Running command (Java 21): mvn help:effective-pom -Doutput=effective-pom-ef7a60d9-3066-4b1f-b1d4-b64026ac3c16.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------------< com.hoja1:hoja1 >---------------------------
+[INFO] Building hoja1 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.1:effective-pom (default-cli) @ hoja1 ---
+[INFO] Effective-POM written to: c:\Users\Admin\Documents\Hoja1\effective-pom-ef7a60d9-3066-4b1f-b1d4-b64026ac3c16.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  44.133 s
+[INFO] Finished at: 2026-01-23T14:56:46-06:00
+[INFO] ------------------------------------------------------------------------
+2026-01-23T20:56:46.573Z [INFO] [MavenBuildTool] Found pom.xml files: c:\Users\Admin\Documents\Hoja1\pom.xml
+2026-01-23T20:56:46.574Z [INFO] [MavenBuildTool] Java version found in c:\Users\Admin\Documents\Hoja1\pom.xml: 21
+2026-01-23T20:56:46.574Z [INFO] [BaseBuildTool] Notifying Java version/Config change: '21' || '21'
+2026-01-23T20:56:46.582Z [INFO] [Project Hoja1]: Java version of project Hoja1 is changed.
+2026-01-23T20:56:46.583Z [INFO] [Project Hoja1]: Java version of project Hoja1 is changed to '21' || '21'
+2026-01-23T20:56:46.586Z [INFO] [Project Hoja1]: build tool config of project Hoja1 is modified.
+2026-01-23T20:56:46.592Z [INFO] [Project Hoja1]: dependencies of project Hoja1 may be changed, resetting promise.
+2026-01-23T20:56:46.592Z [INFO] [MavenBuildTool] Getting build errors of c:\Users\Admin\Documents\Hoja1 using Maven
+2026-01-23T20:56:46.598Z [INFO] [Environment] Running command (Java 21): mvn clean test-compile -q -B -fn
+[ERROR] COMPILATION ERROR : 
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[9,13] cannot find symbol
+  symbol:   class RadioController
+  location: class controller.RadioControllerTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[9,13] cannot find symbol
+  symbol:   class RadioGroup
+  location: class models.RadioGroupTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[3,14] cannot find symbol
+  symbol:   class RadioGroup
+  location: package models
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[14,13] cannot find symbol
+  symbol:   class RadioService
+  location: class service.RadioServiceTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[15,13] cannot find symbol
+  symbol:   class RadioGroup
+  location: class service.RadioServiceTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[13,26] cannot find symbol
+  symbol:   class RadioController
+  location: class controller.RadioControllerTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,9] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,33] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,9] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,33] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,9] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,33] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,9] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,33] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,9] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,33] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,9] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,33] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,9] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,33] cannot find symbol
+  symbol:   class Favorito
+  location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[13,21] cannot find symbol
+  symbol:   class RadioGroup
+  location: class models.RadioGroupTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[19,21] cannot find symbol
+  symbol:   class RadioGroup
+  location: class service.RadioServiceTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[20,23] cannot find symbol
+  symbol:   class RadioService
+  location: class service.RadioServiceTest
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:testCompile (default-testCompile) on project hoja1: Compilation failure: Compilation failure: 
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[9,13] cannot find symbol
+[ERROR]   symbol:   class RadioController
+[ERROR]   location: class controller.RadioControllerTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[9,13] cannot find symbol
+[ERROR]   symbol:   class RadioGroup
+[ERROR]   location: class models.RadioGroupTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[3,14] cannot find symbol
+[ERROR]   symbol:   class RadioGroup
+[ERROR]   location: package models
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[14,13] cannot find symbol
+[ERROR]   symbol:   class RadioService
+[ERROR]   location: class service.RadioServiceTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[15,13] cannot find symbol
+[ERROR]   symbol:   class RadioGroup
+[ERROR]   location: class service.RadioServiceTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[13,26] cannot find symbol
+[ERROR]   symbol:   class RadioController
+[ERROR]   location: class controller.RadioControllerTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,9] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,33] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,9] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,33] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,9] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,33] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,9] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,33] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,9] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,33] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,9] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,33] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,9] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,33] cannot find symbol
+[ERROR]   symbol:   class Favorito
+[ERROR]   location: class models.FavoritoTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[13,21] cannot find symbol
+[ERROR]   symbol:   class RadioGroup
+[ERROR]   location: class models.RadioGroupTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[19,21] cannot find symbol
+[ERROR]   symbol:   class RadioGroup
+[ERROR]   location: class service.RadioServiceTest
+[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[20,23] cannot find symbol
+[ERROR]   symbol:   class RadioService
+[ERROR]   location: class service.RadioServiceTest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
+2026-01-23T20:57:32.086Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-01-23T20:57:32.088Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-01-23T20:57:32.097Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-01-23T20:57:32.097Z [INFO] [MavenBuildTool] Cleaning c:\Users\Admin\Documents\Hoja1 using Maven
+2026-01-23T20:57:32.097Z [INFO] [Environment] Running command (Java 21): mvn clean -q -B -fn
+2026-01-23T20:57:35.048Z [INFO] [Project Hoja1]: Compilation errors of project Hoja1 is updated: 0 -> 23
+2026-01-23T20:57:35.049Z [INFO] [Tool.invoke]({result: {
+  "message": "Build failed with 23 errors using command: `mvn clean test-compile -q -B -fn`.\n- cannot find symbol symbol:   class RadioController location: class controller.RadioControllerTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[9,13] cannot find symbol\n  [ERROR]   symbol:   class RadioController\n  [ERROR]   location: class controller.RadioControllerTest\n  ```\n- cannot find symbol symbol:   class RadioGroup location: class models.RadioGroupTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[9,13] cannot find symbol\n  [ERROR]   symbol:   class RadioGroup\n  [ERROR]   location: class models.RadioGroupTest\n  ```\n- cannot find symbol symbol:   class RadioGroup location: package models\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[3,14] cannot find symbol\n  [ERROR]   symbol:   class RadioGroup\n  [ERROR]   location: package models\n  ```\n- cannot find symbol symbol:   class RadioService location: class service.RadioServiceTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[14,13] cannot find symbol\n  [ERROR]   symbol:   class RadioService\n  [ERROR]   location: class service.RadioServiceTest\n  ```\n- cannot find symbol symbol:   class RadioGroup location: class service.RadioServiceTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[15,13] cannot find symbol\n  [ERROR]   symbol:   class RadioGroup\n  [ERROR]   location: class service.RadioServiceTest\n  ```\n- cannot find symbol symbol:   class RadioController location: class controller.RadioControllerTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[13,26] cannot find symbol\n  [ERROR]   symbol:   class RadioController\n  [ERROR]   location: class controller.RadioControllerTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,9] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,33] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,9] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,33] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,9] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,33] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,9] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,33] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,9] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,33] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,9] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,33] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,9] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,33] cannot find symbol\n  [ERROR]   symbol:   class Favorito\n  [ERROR]   location: class models.FavoritoTest\n  ```\n- cannot find symbol symbol:   class RadioGroup location: class models.RadioGroupTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[13,21] cannot find symbol\n  [ERROR]   symbol:   class RadioGroup\n  [ERROR]   location: class models.RadioGroupTest\n  ```\n- cannot find symbol symbol:   class RadioGroup location: class service.RadioServiceTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[19,21] cannot find symbol\n  [ERROR]   symbol:   class RadioGroup\n  [ERROR]   location: class service.RadioServiceTest\n  ```\n- cannot find symbol symbol:   class RadioService location: class service.RadioServiceTest\n  ```\n  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[20,23] cannot find symbol\n  [ERROR]   symbol:   class RadioService\n  [ERROR]   location: class service.RadioServiceTest\n  ```",
+  "result": {
+    "numOfJavaFiles": 10,
+    "numOfClassFiles": 0,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 10,
+        "numOfClassFiles": 0
+      }
+    },
+    "errors": [
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\controller\\RadioControllerTest.java",
+        "lineNumber": "9",
+        "colNumber": "13",
+        "errorMessage": "cannot find symbol symbol:   class RadioController location: class controller.RadioControllerTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[9,13] cannot find symbol\n[ERROR]   symbol:   class RadioController\n[ERROR]   location: class controller.RadioControllerTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\RadioGroupTest.java",
+        "lineNumber": "9",
+        "colNumber": "13",
+        "errorMessage": "cannot find symbol symbol:   class RadioGroup location: class models.RadioGroupTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[9,13] cannot find symbol\n[ERROR]   symbol:   class RadioGroup\n[ERROR]   location: class models.RadioGroupTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\service\\RadioServiceTest.java",
+        "lineNumber": "3",
+        "colNumber": "14",
+        "errorMessage": "cannot find symbol symbol:   class RadioGroup location: package models",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[3,14] cannot find symbol\n[ERROR]   symbol:   class RadioGroup\n[ERROR]   location: package models"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\service\\RadioServiceTest.java",
+        "lineNumber": "14",
+        "colNumber": "13",
+        "errorMessage": "cannot find symbol symbol:   class RadioService location: class service.RadioServiceTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[14,13] cannot find symbol\n[ERROR]   symbol:   class RadioService\n[ERROR]   location: class service.RadioServiceTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\service\\RadioServiceTest.java",
+        "lineNumber": "15",
+        "colNumber": "13",
+        "errorMessage": "cannot find symbol symbol:   class RadioGroup location: class service.RadioServiceTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[15,13] cannot find symbol\n[ERROR]   symbol:   class RadioGroup\n[ERROR]   location: class service.RadioServiceTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\controller\\RadioControllerTest.java",
+        "lineNumber": "13",
+        "colNumber": "26",
+        "errorMessage": "cannot find symbol symbol:   class RadioController location: class controller.RadioControllerTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[13,26] cannot find symbol\n[ERROR]   symbol:   class RadioController\n[ERROR]   location: class controller.RadioControllerTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "15",
+        "colNumber": "9",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,9] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "15",
+        "colNumber": "33",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,33] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "29",
+        "colNumber": "9",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,9] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "29",
+        "colNumber": "33",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,33] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "43",
+        "colNumber": "9",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,9] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "43",
+        "colNumber": "33",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,33] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "57",
+        "colNumber": "9",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,9] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "57",
+        "colNumber": "33",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,33] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "70",
+        "colNumber": "9",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,9] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "70",
+        "colNumber": "33",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,33] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "83",
+        "colNumber": "9",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,9] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "83",
+        "colNumber": "33",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,33] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "96",
+        "colNumber": "9",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,9] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\FavoritoTest.java",
+        "lineNumber": "96",
+        "colNumber": "33",
+        "errorMessage": "cannot find symbol symbol:   class Favorito location: class models.FavoritoTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,33] cannot find symbol\n[ERROR]   symbol:   class Favorito\n[ERROR]   location: class models.FavoritoTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\models\\RadioGroupTest.java",
+        "lineNumber": "13",
+        "colNumber": "21",
+        "errorMessage": "cannot find symbol symbol:   class RadioGroup location: class models.RadioGroupTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[13,21] cannot find symbol\n[ERROR]   symbol:   class RadioGroup\n[ERROR]   location: class models.RadioGroupTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\service\\RadioServiceTest.java",
+        "lineNumber": "19",
+        "colNumber": "21",
+        "errorMessage": "cannot find symbol symbol:   class RadioGroup location: class service.RadioServiceTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[19,21] cannot find symbol\n[ERROR]   symbol:   class RadioGroup\n[ERROR]   location: class service.RadioServiceTest"
+      },
+      {
+        "filepath": "c:\\Users\\Admin\\Documents\\Hoja1\\src\\test\\java\\service\\RadioServiceTest.java",
+        "lineNumber": "20",
+        "colNumber": "23",
+        "errorMessage": "cannot find symbol symbol:   class RadioService location: class service.RadioServiceTest",
+        "raw": "[ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[20,23] cannot find symbol\n[ERROR]   symbol:   class RadioService\n[ERROR]   location: class service.RadioServiceTest"
+      }
+    ],
+    "command": "mvn clean test-compile -q -B -fn"
+  },
+  "telemetry": {
+    "result": "failed"
+  }
+}}).
+2026-01-23T20:57:35.049Z [INFO] [Task.complete](): Completing task toolCall
+2026-01-23T20:57:35.050Z [INFO] [Task.complete](): Completed task toolCall
+2026-01-23T20:57:35.050Z [INFO] [Tool.invoke]({message: Build failed with 23 errors using command: `mvn clean test-compile -q -B -fn`.
+- cannot find symbol symbol:   class RadioController location: class controller.RadioControllerTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[9,13] cannot find symbol
+  [ERROR]   symbol:   class RadioController
+  [ERROR]   location: class controller.RadioControllerTest
+  ```
+- cannot find symbol symbol:   class RadioGroup location: class models.RadioGroupTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[9,13] cannot find symbol
+  [ERROR]   symbol:   class RadioGroup
+  [ERROR]   location: class models.RadioGroupTest
+  ```
+- cannot find symbol symbol:   class RadioGroup location: package models
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[3,14] cannot find symbol
+  [ERROR]   symbol:   class RadioGroup
+  [ERROR]   location: package models
+  ```
+- cannot find symbol symbol:   class RadioService location: class service.RadioServiceTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[14,13] cannot find symbol
+  [ERROR]   symbol:   class RadioService
+  [ERROR]   location: class service.RadioServiceTest
+  ```
+- cannot find symbol symbol:   class RadioGroup location: class service.RadioServiceTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[15,13] cannot find symbol
+  [ERROR]   symbol:   class RadioGroup
+  [ERROR]   location: class service.RadioServiceTest
+  ```
+- cannot find symbol symbol:   class RadioController location: class controller.RadioControllerTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/controller/RadioControllerTest.java:[13,26] cannot find symbol
+  [ERROR]   symbol:   class RadioController
+  [ERROR]   location: class controller.RadioControllerTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,9] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[15,33] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,9] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[29,33] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,9] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[43,33] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,9] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[57,33] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,9] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[70,33] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,9] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[83,33] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,9] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class Favorito location: class models.FavoritoTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/FavoritoTest.java:[96,33] cannot find symbol
+  [ERROR]   symbol:   class Favorito
+  [ERROR]   location: class models.FavoritoTest
+  ```
+- cannot find symbol symbol:   class RadioGroup location: class models.RadioGroupTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/models/RadioGroupTest.java:[13,21] cannot find symbol
+  [ERROR]   symbol:   class RadioGroup
+  [ERROR]   location: class models.RadioGroupTest
+  ```
+- cannot find symbol symbol:   class RadioGroup location: class service.RadioServiceTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[19,21] cannot find symbol
+  [ERROR]   symbol:   class RadioGroup
+  [ERROR]   location: class service.RadioServiceTest
+  ```
+- cannot find symbol symbol:   class RadioService location: class service.RadioServiceTest
+  ```
+  [ERROR] /c:/Users/Admin/Documents/Hoja1/src/test/java/service/RadioServiceTest.java:[20,23] cannot find symbol
+  [ERROR]   symbol:   class RadioService
+  [ERROR]   location: class service.RadioServiceTest
+  ```}).
+2026-01-23T20:57:35.050Z [INFO] ----------------------invoked build_java_project----------------------
